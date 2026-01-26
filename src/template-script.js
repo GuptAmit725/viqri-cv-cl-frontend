@@ -561,7 +561,7 @@ console.log('Job Details:', jobDetails);
 // JOB MATCHING FUNCTIONALITY
 // ============================================================================
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://viqri-cv-api-5u7hdc64va-uc.a.run.app';
 let currentJobs = [];
 let currentInsights = null;
 
