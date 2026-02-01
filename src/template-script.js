@@ -6,6 +6,16 @@ let jobDetails = null;
 // Initialize
 init();
 
+// Route Protection - Must have CV data to access this page
+(function() {
+    const cvData = localStorage.getItem('cvData');
+    if (!cvData || cvData === '{}' || cvData === 'null') {
+        alert('Please upload your CV first to access this page.');
+        window.location.href = 'index.html';
+        throw new Error('CV data required');
+    }
+})();
+
 function init() {
     loadData();
     setupEventListeners();
@@ -561,7 +571,7 @@ console.log('Job Details:', jobDetails);
 // JOB MATCHING FUNCTIONALITY
 // ============================================================================
 
-const API_BASE_URL = 'https://viqri-cv-api-5u7hdc64va-uc.a.run.app';
+const API_BASE_URL = 'http://localhost:8000';
 let currentJobs = [];
 let currentInsights = null;
 
