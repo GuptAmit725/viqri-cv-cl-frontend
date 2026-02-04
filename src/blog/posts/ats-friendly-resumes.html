@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2892129066054550"
+     crossorigin="anonymous"></script>
+    <title>Making Your Resume ATS-Friendly - Viqri CV Blog</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .blog-post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px 60px;
+        }
+
+        .blog-post-header {
+            margin-bottom: 48px;
+        }
+
+        .blog-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 24px;
+        }
+
+        .blog-breadcrumb a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-breadcrumb a:hover {
+            color: #fbbf24;
+        }
+
+        .blog-post-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .blog-post-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 48px;
+            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+        }
+
+        .blog-post-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 48px;
+            color: #1f2937;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-post-content h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 48px 0 24px;
+            line-height: 1.3;
+        }
+
+        .blog-post-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 36px 0 20px;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 24px;
+            color: #374151;
+        }
+
+        .blog-post-content ul,
+        .blog-post-content ol {
+            margin: 24px 0;
+            padding-left: 32px;
+        }
+
+        .blog-post-content li {
+            margin-bottom: 12px;
+            color: #374151;
+        }
+
+        .blog-post-content blockquote {
+            border-left: 4px solid #ec4899;
+            padding-left: 24px;
+            margin: 32px 0;
+            font-style: italic;
+            color: #4b5563;
+            background: rgba(236, 72, 153, 0.05);
+            padding: 24px;
+            border-radius: 8px;
+        }
+
+        .blog-post-content .checklist {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .blog-post-content .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .blog-post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .blog-post-tag {
+            padding: 8px 16px;
+            background: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .blog-post-tag:hover {
+            background: rgba(236, 72, 153, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .blog-cta {
+            background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+            border-radius: 20px;
+            padding: 48px;
+            text-align: center;
+            margin-top: 48px;
+            color: white;
+        }
+
+        .blog-cta h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .blog-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .blog-cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: white;
+            color: #ec4899;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+            color: #fbbf24;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-title {
+                font-size: 2rem;
+            }
+
+            .blog-post-content {
+                padding: 32px 24px;
+            }
+
+            .blog-featured-image {
+                height: 250px;
+            }
+
+            .blog-cta {
+                padding: 32px 24px;
+            }
+
+            .blog-cta h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-wrapper">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M8 4L20 32L32 4" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="brand-text">Viqri</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="blog-post-container">
+        <a href="../blogs.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to Blog
+        </a>
+
+        <article>
+            <div class="blog-post-header">
+                <nav class="blog-breadcrumb">
+                    <a href="../../index.html">Home</a>
+                    <span>/</span>
+                    <a href="../blogs.html">Blog</a>
+                    <span>/</span>
+                    <span>Article</span>
+                </nav>
+
+                <h1 class="blog-post-title">Making Your Resume ATS-Friendly: What You Need to Know</h1>
+                
+                <div class="blog-post-meta">
+                    <div class="blog-post-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-width="2"/>
+                            <circle cx="12" cy="7" r="4" stroke-width="2"/>
+                        </svg>
+                        Viqri Team
+                    </div>
+                    <span>•</span>
+                    <div class="blog-post-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6" stroke-width="2"/>
+                            <line x1="8" y1="2" x2="8" y2="6" stroke-width="2"/>
+                            <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
+                        </svg>
+                        January 25, 2026
+                    </div>
+                    <span>•</span>
+                    <div class="blog-post-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                            <polyline points="12 6 12 12 16 14" stroke-width="2"/>
+                        </svg>
+                        6 min read
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="blog-post-content">
+                <p>You've crafted the perfect resume. Your achievements are impressive, your experience is relevant, and the design looks stunning. You hit submit and... crickets. What went wrong?</p>
+
+                <p>The harsh reality: your beautiful resume might never reach human eyes. Applicant Tracking Systems (ATS) process over 98% of Fortune 500 applications, and if your resume isn't optimized for these digital gatekeepers, you're essentially invisible.</p>
+
+                <h2>What is an ATS, Really?</h2>
+                
+                <p>An Applicant Tracking System is software that companies use to manage their recruitment process. Think of it as a filter that:</p>
+
+                <ul>
+                    <li>Parses and stores resume data in a database</li>
+                    <li>Ranks candidates based on keywords and qualifications</li>
+                    <li>Helps recruiters search and filter applications</li>
+                    <li>Automatically rejects resumes that don't meet basic criteria</li>
+                </ul>
+
+                <p>The problem? ATS software varies widely in sophistication. While some modern systems use AI and machine learning, many still rely on basic text parsing that struggles with creative formatting.</p>
+
+                <div class="warning-box">
+                    <strong>Warning:</strong> Even if you're perfectly qualified, poor ATS optimization can result in automatic rejection. Studies show that 75% of qualified candidates are filtered out before a human ever sees their application.
+                </div>
+
+                <h2>The ATS Compatibility Checklist</h2>
+
+                <div class="checklist">
+                    <h3>✓ Must-Have Elements</h3>
+                    <ul>
+                        <li>Standard section headings (Experience, Education, Skills)</li>
+                        <li>Chronological work history with clear dates</li>
+                        <li>Keywords from the job description naturally incorporated</li>
+                        <li>Simple, clean formatting with no graphics or images in body text</li>
+                        <li>Standard fonts (Arial, Calibri, Times New Roman, Georgia)</li>
+                        <li>File format: .docx or PDF (check job posting for preference)</li>
+                    </ul>
+                </div>
+
+                <h2>Formatting Rules That ATS Can't Handle</h2>
+
+                <p>Avoid these common formatting mistakes that confuse ATS systems:</p>
+
+                <h3>1. Complex Layouts</h3>
+                
+                <p>Tables, text boxes, columns, and headers/footers can cause parsing errors. ATS systems read left to right, top to bottom. Anything that disrupts this flow gets jumbled or ignored.</p>
+
+                <h3>2. Graphics and Images</h3>
+                
+                <p>This includes photos, logos, charts, graphs, and decorative elements. ATS can't read images, so any text embedded in graphics is lost. Even your name, if it's in an image format, might not be captured.</p>
+
+                <h3>3. Unusual Fonts and Formatting</h3>
+                
+                <p>Fancy fonts, excessive bolding, italics, underlines, or text colors can cause parsing problems. Stick to standard fonts in black text.</p>
+
+                <h3>4. Special Characters and Symbols</h3>
+                
+                <p>Most ATS can handle standard bullets, but symbols like ☆ ♦ ☺ or creative Unicode characters may not parse correctly. Use simple round or square bullets.</p>
+
+                <h2>The Power of Keywords</h2>
+
+                <p>Keywords are the currency of ATS. Here's how to use them effectively:</p>
+
+                <h3>Mining for Gold</h3>
+                
+                <p>Start with the job description. Identify:</p>
+
+                <ul>
+                    <li><strong>Required skills:</strong> These are non-negotiable</li>
+                    <li><strong>Preferred qualifications:</strong> Include these when possible</li>
+                    <li><strong>Industry terminology:</strong> Use the same language as the posting</li>
+                    <li><strong>Certifications and credentials:</strong> Spell them out fully and use acronyms</li>
+                </ul>
+
+                <h3>Strategic Placement</h3>
+                
+                <p>Don't just list keywords—contextualize them:</p>
+
+                <blockquote>
+                    Instead of: "Managed projects"<br>
+                    Write: "Managed cross-functional Agile projects using Scrum methodology, delivering 15+ software releases on schedule"
+                </blockquote>
+
+                <h3>The Acronym Rule</h3>
+                
+                <p>Always spell out acronyms the first time, then use the acronym: "Search Engine Optimization (SEO)" not just "SEO". ATS may search for either version.</p>
+
+                <h2>Section-by-Section ATS Optimization</h2>
+
+                <h3>Contact Information</h3>
+                
+                <p>Place this at the top, not in a header. Include:</p>
+
+                <ul>
+                    <li>Full name</li>
+                    <li>Phone number (format doesn't usually matter, but (555) 123-4567 is safe)</li>
+                    <li>Email address</li>
+                    <li>LinkedIn URL (optional but recommended)</li>
+                    <li>City and state (full addresses are outdated)</li>
+                </ul>
+
+                <h3>Work Experience</h3>
+                
+                <p>Use this format:</p>
+
+                <ul>
+                    <li><strong>Company Name</strong> | Location</li>
+                    <li><strong>Job Title</strong> | Month Year – Month Year</li>
+                    <li>Achievement-focused bullet points with keywords</li>
+                </ul>
+
+                <h3>Education</h3>
+                
+                <p>Include:</p>
+
+                <ul>
+                    <li>Degree type and major (spell out, e.g., "Bachelor of Science in Computer Science")</li>
+                    <li>University name</li>
+                    <li>Graduation date or expected graduation</li>
+                    <li>GPA if above 3.5 and you're a recent graduate</li>
+                </ul>
+
+                <h3>Skills Section</h3>
+                
+                <p>This is keyword gold. Create categories:</p>
+
+                <ul>
+                    <li><strong>Technical Skills:</strong> Programming languages, software, tools</li>
+                    <li><strong>Certifications:</strong> All relevant professional credentials</li>
+                    <li><strong>Languages:</strong> If applicable, with proficiency levels</li>
+                </ul>
+
+                <h2>Testing Your Resume</h2>
+
+                <p>Before submitting, run these tests:</p>
+
+                <ol>
+                    <li><strong>Plain Text Test:</strong> Copy your resume into Notepad. If it's a jumbled mess, the ATS will struggle too.</li>
+                    <li><strong>Keyword Analysis:</strong> Use free tools to compare your resume against the job description</li>
+                    <li><strong>File Format Test:</strong> Save as both .docx and PDF, then open to verify formatting holds</li>
+                    <li><strong>Mobile View:</strong> ATS aside, recruiters often review on phones. Ensure readability</li>
+                </ol>
+
+                <h2>Common Myths Debunked</h2>
+
+                <h3>Myth: More keywords = better results</h3>
+                
+                <p>Reality: Keyword stuffing is detectable and will hurt you. Use keywords naturally in context. Modern ATS can identify "keyword stuffing" patterns.</p>
+
+                <h3>Myth: You need to exactly match every requirement</h3>
+                
+                <p>Reality: Many listings are wish lists. Focus on matching 70-80% of requirements. Quality keywords beat quantity.</p>
+
+                <h3>Myth: All PDF resumes get rejected</h3>
+                
+                <p>Reality: Modern ATS can parse PDFs well. However, some older systems prefer .docx. When in doubt, check the job posting for guidance.</p>
+
+                <h2>Advanced ATS Strategies</h2>
+
+                <h3>The Dual Resume Approach</h3>
+                
+                <p>Create two versions:</p>
+
+                <ol>
+                    <li><strong>ATS Version:</strong> Simple, keyword-rich, perfectly formatted</li>
+                    <li><strong>Human Version:</strong> More design elements, for networking and direct submissions</li>
+                </ol>
+
+                <h3>Quantify Everything</h3>
+                
+                <p>ATS often ranks candidates by impact. Numbers make your achievements parseable and comparable:</p>
+
+                <ul>
+                    <li>"Increased sales" → "Increased sales by 35% ($2.4M) within 8 months"</li>
+                    <li>"Led team" → "Led team of 12 developers across 3 time zones"</li>
+                    <li>"Improved efficiency" → "Reduced processing time by 40%, saving 15 hours/week"</li>
+                </ul>
+
+                <h3>The Cover Letter Hack</h3>
+                
+                <p>When you can, submit a cover letter—even if optional. It's another opportunity to include keywords and context that might not fit naturally in your resume.</p>
+
+                <h2>Staying Human While Beating the Bots</h2>
+
+                <p>The goal isn't to game the system—it's to ensure your genuine qualifications get seen. An ATS-friendly resume should:</p>
+
+                <ul>
+                    <li>Be readable by both machines and humans</li>
+                    <li>Showcase your actual accomplishments</li>
+                    <li>Use industry-standard terminology</li>
+                    <li>Tell a coherent career story</li>
+                </ul>
+
+                <p>Remember: passing the ATS is just the first hurdle. Once your resume reaches a human, it needs to be compelling, clear, and professional.</p>
+
+                <h2>The Bottom Line</h2>
+
+                <p>In 2026, ATS optimization isn't optional—it's fundamental. But it doesn't mean sacrificing your unique value or professional identity. By understanding how these systems work and following proven formatting guidelines, you can ensure your qualifications get the attention they deserve.</p>
+
+                <p>The best approach? Use AI-powered tools that automatically optimize for ATS while maintaining human readability. That way, you present your best self to both algorithms and people.</p>
+
+                <div class="blog-post-tags">
+                    <a href="#" class="blog-post-tag">ATS</a>
+                    <a href="#" class="blog-post-tag">Resume</a>
+                    <a href="#" class="blog-post-tag">Job Search</a>
+                    <a href="#" class="blog-post-tag">Career Tips</a>
+                </div>
+            </div>
+
+            <div class="blog-cta">
+                <h3>Optimize Your Resume for ATS Instantly</h3>
+                <p>Our AI analyzes your resume and automatically optimizes it for ATS compatibility—no manual formatting required.</p>
+                <a href="../../index.html" class="blog-cta-button">Try It Free →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 60px;">
+        <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 16px;">&copy; 2026 Viqri CV. All rights reserved.</p>
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+            <a href="../../about.html" style="color: #a855f7; text-decoration: none;">About</a>
+            <a href="../../contact.html" style="color: #a855f7; text-decoration: none;">Contact</a>
+            <a href="../../faq.html" style="color: #a855f7; text-decoration: none;">FAQ</a>
+            <a href="../../privacy-policy.html" style="color: #a855f7; text-decoration: none;">Privacy</a>
+            <a href="../../terms-of-service.html" style="color: #a855f7; text-decoration: none;">Terms</a>
+        </div>
+    </footer>
+</body>
+</html>

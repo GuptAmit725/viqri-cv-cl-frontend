@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2892129066054550"
+     crossorigin="anonymous"></script>
+    <title>Building Your Professional Portfolio on GitHub Pages - Viqri CV Blog</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .blog-post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px 60px;
+        }
+
+        .blog-post-header {
+            margin-bottom: 48px;
+        }
+
+        .blog-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 24px;
+        }
+
+        .blog-breadcrumb a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-breadcrumb a:hover {
+            color: #fbbf24;
+        }
+
+        .blog-post-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .blog-post-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .blog-featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 48px;
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .blog-post-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 48px;
+            color: #1f2937;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-post-content h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 48px 0 24px;
+            line-height: 1.3;
+        }
+
+        .blog-post-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 36px 0 20px;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 24px;
+            color: #374151;
+        }
+
+        .blog-post-content ul,
+        .blog-post-content ol {
+            margin: 24px 0;
+            padding-left: 32px;
+        }
+
+        .blog-post-content li {
+            margin-bottom: 12px;
+            color: #374151;
+        }
+
+        .blog-post-content blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 24px;
+            margin: 32px 0;
+            font-style: italic;
+            color: #4b5563;
+            background: rgba(102, 126, 234, 0.05);
+            padding: 24px;
+            border-radius: 8px;
+        }
+
+        .blog-post-content code {
+            background: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #667eea;
+        }
+
+        .blog-post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .blog-post-tag {
+            padding: 8px 16px;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .blog-post-tag:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .blog-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 48px;
+            text-align: center;
+            margin-top: 48px;
+            color: white;
+        }
+
+        .blog-cta h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .blog-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .blog-cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: white;
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+            color: #fbbf24;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-title {
+                font-size: 2rem;
+            }
+
+            .blog-post-content {
+                padding: 32px 24px;
+            }
+
+            .blog-featured-image {
+                height: 250px;
+            }
+
+            .blog-cta {
+                padding: 32px 24px;
+            }
+
+            .blog-cta h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-wrapper">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M8 4L20 32L32 4" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="brand-text">Viqri</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="blog-post-container">
+        <a href="../blogs.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 12H5M12 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to Blog
+        </a>
+
+        <article>
+            <div class="blog-post-header">
+                <nav class="blog-breadcrumb">
+                    <a href="../../index.html">Home</a>
+                    <span>/</span>
+                    <a href="../blogs.html">Blog</a>
+                    <span>/</span>
+                    <span>Article</span>
+                </nav>
+
+                <h1 class="blog-post-title">Building Your Professional Portfolio on GitHub Pages</h1>
+                
+                <div class="blog-post-meta">
+                    <div class="blog-post-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-width="2"/>
+                            <circle cx="12" cy="7" r="4" stroke-width="2"/>
+                        </svg>
+                        Viqri Team
+                    </div>
+                    <span>•</span>
+                    <div class="blog-post-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6" stroke-width="2"/>
+                            <line x1="8" y1="2" x2="8" y2="6" stroke-width="2"/>
+                            <line x1="3" y1="10" x2="21" y2="10" stroke-width="2"/>
+                        </svg>
+                        January 28, 2026
+                    </div>
+                    <span>•</span>
+                    <div class="blog-post-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                            <polyline points="12 6 12 12 16 14" stroke-width="2"/>
+                        </svg>
+                        7 min read
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="blog-post-content">
+                <p>In today's competitive job market, having an online portfolio isn't just nice to have—it's essential. GitHub Pages offers a completely free, professional way to showcase your work, and with the right setup, you can have a stunning portfolio live in under 10 minutes.</p>
+
+                <h2>Why GitHub Pages?</h2>
+                
+                <p>GitHub Pages stands out from other portfolio hosting solutions for several compelling reasons:</p>
+
+                <ul>
+                    <li><strong>Completely Free:</strong> No hosting fees, no domain charges (though you can use a custom domain)</li>
+                    <li><strong>Version Control:</strong> Every change is tracked, making it easy to roll back or experiment</li>
+                    <li><strong>Professional Credibility:</strong> Hosting on GitHub signals technical proficiency</li>
+                    <li><strong>Lightning Fast:</strong> Content is served from GitHub's CDN globally</li>
+                    <li><strong>Zero Setup Time:</strong> No servers to configure, no databases to manage</li>
+                </ul>
+
+                <h2>Getting Started: The Quick Way</h2>
+
+                <p>The fastest path to a live portfolio involves these simple steps:</p>
+
+                <h3>1. Create Your Repository</h3>
+                
+                <p>Head to GitHub and create a new repository named <code>username.github.io</code> (replace "username" with your actual GitHub username). This special naming convention tells GitHub to automatically publish your repository as a website.</p>
+
+                <h3>2. Choose Your Approach</h3>
+                
+                <p>You have three main options:</p>
+
+                <ul>
+                    <li><strong>Use an AI-Powered Generator:</strong> Tools like Viqri CV can create a complete portfolio from your resume in seconds</li>
+                    <li><strong>Start with a Template:</strong> Find free templates on GitHub or other template marketplaces</li>
+                    <li><strong>Build from Scratch:</strong> Create a custom design that perfectly matches your brand</li>
+                </ul>
+
+                <blockquote>
+                    "A well-crafted portfolio isn't just about showing what you've done—it's about demonstrating how you think, solve problems, and communicate your value."
+                </blockquote>
+
+                <h2>Essential Portfolio Elements</h2>
+
+                <p>Your portfolio should include these key sections to make a strong impression:</p>
+
+                <h3>1. Compelling Introduction</h3>
+                
+                <p>Start with a clear, concise statement about who you are and what you do. Avoid generic phrases. Instead of "passionate developer," try "Full-stack developer specializing in scalable web applications for fintech startups."</p>
+
+                <h3>2. Project Showcase</h3>
+                
+                <p>This is the heart of your portfolio. For each project include:</p>
+
+                <ul>
+                    <li>Clear project title and one-sentence description</li>
+                    <li>Technologies used (with visual tags or icons)</li>
+                    <li>Your specific role and contributions</li>
+                    <li>Measurable outcomes or impact</li>
+                    <li>Links to live demos and source code</li>
+                    <li>Screenshots or video demonstrations</li>
+                </ul>
+
+                <h3>3. Skills and Expertise</h3>
+                
+                <p>Organize your skills into categories (Frontend, Backend, Tools, etc.) and consider using visual indicators for proficiency levels. Be honest—it's better to show depth in a few areas than surface knowledge in many.</p>
+
+                <h3>4. Professional Experience</h3>
+                
+                <p>Present your work history with focus on achievements rather than responsibilities. Use the format: "Accomplished [X] as measured by [Y] by doing [Z]."</p>
+
+                <h3>5. Contact Information</h3>
+                
+                <p>Make it easy for opportunities to find you. Include:</p>
+
+                <ul>
+                    <li>Professional email</li>
+                    <li>LinkedIn profile</li>
+                    <li>GitHub profile (obviously)</li>
+                    <li>Optional: Twitter, personal blog, or relevant social media</li>
+                </ul>
+
+                <h2>Design Best Practices</h2>
+
+                <p>A great portfolio combines aesthetics with usability. Keep these principles in mind:</p>
+
+                <h3>Mobile-First Design</h3>
+                
+                <p>Over 60% of portfolio views come from mobile devices. Ensure your site looks perfect on phones and tablets first, then enhance for desktop.</p>
+
+                <h3>Fast Loading Times</h3>
+                
+                <p>Optimize images, minimize JavaScript, and use modern CSS. A slow portfolio suggests you don't understand performance optimization.</p>
+
+                <h3>Clear Navigation</h3>
+                
+                <p>Visitors should never wonder where to click next. Use a sticky navigation bar and include clear calls-to-action.</p>
+
+                <h3>Consistent Branding</h3>
+                
+                <p>Choose a color scheme that reflects your personality and stick with it. Use the same colors, fonts, and style across all sections.</p>
+
+                <h2>Advanced Features to Consider</h2>
+
+                <p>Once you have the basics in place, consider adding:</p>
+
+                <ul>
+                    <li><strong>Blog Integration:</strong> Share your thoughts and expertise regularly</li>
+                    <li><strong>Dark Mode Toggle:</strong> Let visitors choose their preferred viewing experience</li>
+                    <li><strong>Interactive Demos:</strong> Embed live code examples or project demonstrations</li>
+                    <li><strong>Analytics:</strong> Use Google Analytics to understand visitor behavior</li>
+                    <li><strong>Contact Form:</strong> Make it easy for people to reach out</li>
+                </ul>
+
+                <h2>Maintenance and Updates</h2>
+
+                <p>Your portfolio is never truly "done." Set a reminder to update it every quarter with:</p>
+
+                <ul>
+                    <li>New projects or achievements</li>
+                    <li>Updated skills or certifications</li>
+                    <li>Fresh testimonials or recommendations</li>
+                    <li>Recent blog posts or articles</li>
+                </ul>
+
+                <h2>Common Mistakes to Avoid</h2>
+
+                <p>Even great developers make these portfolio mistakes:</p>
+
+                <ul>
+                    <li><strong>Too Much Information:</strong> Quality over quantity. 5 great projects beat 20 mediocre ones</li>
+                    <li><strong>Broken Links:</strong> Test every link regularly. A dead link to your "best project" is embarrassing</li>
+                    <li><strong>Generic Content:</strong> "Passionate developer seeking opportunities" says nothing. Be specific</li>
+                    <li><strong>No Call-to-Action:</strong> Tell visitors what you want them to do next</li>
+                    <li><strong>Ignoring SEO:</strong> Use proper meta tags, alt text, and semantic HTML</li>
+                </ul>
+
+                <h2>Measuring Success</h2>
+
+                <p>Track these metrics to gauge your portfolio's effectiveness:</p>
+
+                <ul>
+                    <li>Number of visitors and page views</li>
+                    <li>Average time on site</li>
+                    <li>Contact form submissions or email inquiries</li>
+                    <li>Social media shares or mentions</li>
+                    <li>Interview requests and job offers</li>
+                </ul>
+
+                <h2>Final Thoughts</h2>
+
+                <p>Your GitHub Pages portfolio is more than a digital resume—it's a living showcase of your skills, growth, and professional identity. The best time to create it was yesterday. The second best time is now.</p>
+
+                <p>With GitHub Pages, you have a free, powerful platform to present yourself to the world. Whether you're looking for your first job, switching careers, or seeking your next big opportunity, a well-crafted portfolio can open doors that a traditional resume simply can't.</p>
+
+                <p>Start simple, iterate often, and let your work speak for itself. The investment you make in your portfolio today will pay dividends throughout your career.</p>
+
+                <div class="blog-post-tags">
+                    <a href="#" class="blog-post-tag">Portfolio</a>
+                    <a href="#" class="blog-post-tag">GitHub</a>
+                    <a href="#" class="blog-post-tag">Web Development</a>
+                    <a href="#" class="blog-post-tag">Career</a>
+                </div>
+            </div>
+
+            <div class="blog-cta">
+                <h3>Create Your Portfolio in Minutes</h3>
+                <p>Let AI transform your CV into a stunning GitHub portfolio—automatically deployed and ready to share.</p>
+                <a href="../../index.html" class="blog-cta-button">Build My Portfolio →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 60px;">
+        <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 16px;">&copy; 2026 Viqri CV. All rights reserved.</p>
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+            <a href="../../about.html" style="color: #a855f7; text-decoration: none;">About</a>
+            <a href="../../contact.html" style="color: #a855f7; text-decoration: none;">Contact</a>
+            <a href="../../faq.html" style="color: #a855f7; text-decoration: none;">FAQ</a>
+            <a href="../../privacy-policy.html" style="color: #a855f7; text-decoration: none;">Privacy</a>
+            <a href="../../terms-of-service.html" style="color: #a855f7; text-decoration: none;">Terms</a>
+        </div>
+    </footer>
+</body>
+</html>

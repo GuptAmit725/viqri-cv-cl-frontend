@@ -1,0 +1,49 @@
+{
+  "blogs": [
+    {
+      "id": "azure-for-students-2026",
+      "title": "Azure for Students: $100 Free Credits to Launch Your Tech Career",
+      "excerpt": "Discover Microsoft's incredible offer for students: $100 in free Azure credits, professional dev tools, and no credit card required. Perfect for building real-world projects.",
+      "date": "2026-02-04",
+      "author": "Viqri Team",
+      "tags": [
+        "Azure",
+        "Students",
+        "Cloud Computing",
+        "Microsoft"
+      ],
+      "readTime": "8 min read",
+      "featured": true
+    },
+    {
+      "id": "ai-resume-optimization-2026",
+      "title": "AI-Powered Resume Optimization: The Future of Job Applications",
+      "excerpt": "Discover how artificial intelligence is revolutionizing the way we create and optimize resumes for modern job markets.",
+      "date": "2026-02-01",
+      "author": "Viqri Team",
+      "tags": ["AI", "Resume", "Career"],
+      "readTime": "5 min read",
+      "featured": true
+    },
+    {
+      "id": "github-portfolio-guide",
+      "title": "Building Your Professional Portfolio on GitHub Pages",
+      "excerpt": "A comprehensive guide to creating stunning portfolio websites using GitHub Pages - completely free and in minutes.",
+      "date": "2026-01-28",
+      "author": "Viqri Team",
+      "tags": ["Portfolio", "GitHub", "Web Development"],
+      "readTime": "7 min read",
+      "featured": true
+    },
+    {
+      "id": "ats-friendly-resumes",
+      "title": "Making Your Resume ATS-Friendly: What You Need to Know",
+      "excerpt": "Learn the secrets to passing Applicant Tracking Systems and getting your resume in front of real hiring managers.",
+      "date": "2026-01-25",
+      "author": "Viqri Team",
+      "tags": ["ATS", "Resume", "Job Search"],
+      "readTime": "6 min read",
+      "featured": false
+    }
+  ]
+}
